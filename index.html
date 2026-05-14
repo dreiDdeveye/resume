@@ -53,14 +53,14 @@
 
   .name {
     font-family: 'EB Garamond', serif;
-    font-size: 26pt;
+    font-size: 28pt;
     font-weight: 600;
     letter-spacing: -0.02em;
     line-height: 1;
   }
 
   .title-tag {
-    font-size: 7pt;
+    font-size: 7.5pt;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--mid);
@@ -69,14 +69,14 @@
 
   .contact-block {
     text-align: right;
-    font-size: 7.5pt;
+    font-size: 7.8pt;
     color: var(--mid);
     line-height: 1.65;
   }
 
   .summary {
-    font-size: 8pt;
-    line-height: 1.6;
+    font-size: 8.6pt;
+    line-height: 1.65;
     color: var(--mid);
     padding-bottom: 3.5mm;
     border-bottom: 1px solid var(--rule);
@@ -111,7 +111,7 @@
 
   .section-heading {
     font-family: 'EB Garamond', serif;
-    font-size: 9.5pt;
+    font-size: 10.4pt;
     font-weight: 700;
     letter-spacing: 0.13em;
     text-transform: uppercase;
@@ -135,20 +135,20 @@
   }
 
   .entry-title {
-    font-size: 8.5pt;
+    font-size: 9pt;
     font-weight: 600;
     line-height: 1.3;
   }
 
   .entry-subtitle {
-    font-size: 7.5pt;
+    font-size: 8pt;
     color: var(--mid);
     margin-top: 0.5mm;
     line-height: 1.3;
   }
 
   .entry-date {
-    font-size: 7.5pt;
+    font-size: 8pt;
     color: var(--light);
     white-space: nowrap;
     flex-shrink: 0;
@@ -161,9 +161,9 @@
   }
 
   ul.b li {
-    font-size: 8pt;
+    font-size: 8.5pt;
     color: var(--mid);
-    line-height: 1.5;
+    line-height: 1.55;
     padding-left: 3.5mm;
     position: relative;
     margin-bottom: 1.5px;
@@ -181,20 +181,24 @@
   .sg:last-child { margin-bottom: 0; }
 
   .sg-title {
-    font-size: 8pt;
+    font-size: 8.5pt;
     font-weight: 600;
     margin-bottom: 1.5mm;
   }
 
-  .tags { display: flex; flex-wrap: wrap; gap: 2.5px; }
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px 5px;
+    font-size: 8.2pt;
+    color: var(--mid);
+    line-height: 1.6;
+  }
 
   .tag {
-    font-size: 7.5pt;
-    color: var(--mid);
-    border: 1px solid var(--rule);
-    padding: 1px 5px;
-    border-radius: 2px;
-    line-height: 1.6;
+    font-size: inherit;
+    color: inherit;
+    line-height: inherit;
   }
 
   .soft {
@@ -204,8 +208,18 @@
   }
 
   /* ── print ── */
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
   @media print {
-    html, body { background: none; }
+    html, body {
+      width: 210mm;
+      height: 297mm;
+      background: none;
+    }
+
     .page { margin: 0; box-shadow: none; }
     .print-btn { display: none !important; }
   }
@@ -244,14 +258,14 @@
     <header class="header">
       <div>
         <div class="name">Paul Andrei Vicente</div>
-        <div class="title-tag">Information Technology Graduate &nbsp;·&nbsp; Entry-Level IT Professional</div>
+        <div class="title-tag">Information Technology Graduate </div>
       </div>
       <div class="contact-block">
         vicentepaulandrei1823@gmail.com &nbsp;|&nbsp; +63 992 319 3769 &nbsp;|&nbsp; Tuburan, Ligao City, Albay
       </div>
     </header>
     <div class="summary">
-      Detail-oriented Information Technology graduate with hands-on experience in hardware and software troubleshooting, basic network configuration, and graphic design. Gained practical, real-world exposure through an IT internship at TESDA — providing technical support, system maintenance, and end-user assistance in a professional government office environment. Proficient in industry-standard productivity and design tools, with a collaborative work ethic and a strong commitment to continuous learning and professional growth.
+      Detail oriented Information Technology graduate with hands-on experience in hardware and software troubleshooting, basic network configuration, and graphic design. Gained practical, real-world exposure through an IT internship at TESDA providing technical support, system maintenance, and end-user assistance in a professional government office environment. Proficient in industry-standard productivity and design tools, with a collaborative work ethic and a strong commitment to continuous learning and professional growth.
     </div>
   </div>
 
@@ -260,6 +274,20 @@
 
     <!-- ═══ LEFT COLUMN ═══ -->
     <div class="col">
+
+      <!-- EDUCATION -->
+      <div class="section">
+        <div class="section-heading">Education</div>
+        <div class="entry">
+          <div class="entry-header">
+            <div>
+              <div class="entry-title">Bachelor of Science in Information Technology (BSIT)</div>
+              <div class="entry-subtitle">Infotech Development System Colleges (IDSC)</div>
+            </div>
+            <div class="entry-date">2022 – 2026 </div>
+          </div>
+        </div>
+      </div>
 
       <!-- INTERNSHIP -->
       <div class="section">
@@ -292,7 +320,7 @@
               <div class="entry-title">IT Laboratory Exercises & Technical Activities</div>
               <div class="entry-subtitle">Infotech Development System Colleges (IDSC)</div>
             </div>
-            <div class="entry-date">2022 – 2026</div>
+            <div class="entry-date">2022 – 2025</div>
           </div>
           <ul class="b">
             <li>Diagnosed hardware and software issues through structured troubleshooting methodologies.</li>
@@ -307,27 +335,13 @@
               <div class="entry-title">Graphic Design Contributor – School Events & Activities</div>
               <div class="entry-subtitle">Infotech Development System Colleges (IDSC)</div>
             </div>
-            <div class="entry-date">2022 – 2026</div>
+            <div class="entry-date">2022 – 2024</div>
           </div>
           <ul class="b">
             <li>Produced promotional and informational posters for school events, applying color harmony, typography, and visual hierarchy principles.</li>
             <li>Developed social media–ready visual content using Canva, Adobe Photoshop, Illustrator, and Figma.</li>
             <li>Delivered design outputs on schedule through effective collaboration with student organizations.</li>
           </ul>
-        </div>
-      </div>
-
-      <!-- EDUCATION -->
-      <div class="section">
-        <div class="section-heading">Education</div>
-        <div class="entry">
-          <div class="entry-header">
-            <div>
-              <div class="entry-title">Bachelor of Science in Information Technology (BSIT)</div>
-              <div class="entry-subtitle">Infotech Development System Colleges (IDSC)</div>
-            </div>
-            <div class="entry-date">2022 – 2026 | Expected Graduate</div>
-          </div>
         </div>
       </div>
 
@@ -391,19 +405,6 @@
           <div class="tags">
             <span class="tag">Basic Computer Hardware Tools</span>
           </div>
-        </div>
-      </div>
-
-      <!-- SOFT SKILLS -->
-      <div class="section">
-        <div class="section-heading">Soft Skills</div>
-        <div class="soft">
-          Eager to learn &amp; continuously improve<br>
-          Collaborative team player<br>
-          Effective time management<br>
-          Creative problem-solving<br>
-          Detail-oriented and thorough<br>
-          Adaptable in fast-paced environments
         </div>
       </div>
 
