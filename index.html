@@ -5,8 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Resume – Paul Andrei Vicente</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap');
-
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
@@ -18,7 +16,7 @@
 
   html, body {
     background: #ddd;
-    font-family: 'DM Sans', sans-serif;
+    font-family: Cambria, Georgia, serif;
     color: var(--ink);
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
@@ -34,44 +32,66 @@
     flex-direction: column;
     overflow: hidden;
     box-shadow: 0 4px 40px rgba(0,0,0,.2);
+    break-after: page;
+  }
+
+  .page:last-of-type {
+    break-after: auto;
+  }
+
+  .page.is-editing {
+    outline: none;
+  }
+
+  .page.is-editing:focus {
+    box-shadow: 0 4px 40px rgba(0,0,0,.2), 0 0 0 2px rgba(17,17,17,.2);
   }
 
   /* ── TOP BAR: header + summary ── */
   .top {
-    padding: 11mm 14mm 0;
+    padding: 11mm 20mm 0;
     flex-shrink: 0;
   }
 
   .header {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
-    padding-bottom: 3.5mm;
+    align-items: flex-start;
+    gap: 12mm;
+    padding-bottom: 3mm;
     border-bottom: 2px solid var(--ink);
-    margin-bottom: 3.5mm;
+    margin-bottom: 3mm;
+  }
+
+  .header > div:first-child {
+    min-width: 0;
   }
 
   .name {
-    font-family: 'EB Garamond', serif;
-    font-size: 28pt;
-    font-weight: 600;
-    letter-spacing: -0.02em;
+    font-family: Cambria, Georgia, serif;
+    font-size: 26pt;
+    font-weight: 700;
+    letter-spacing: 0;
     line-height: 1;
+    white-space: nowrap;
   }
 
   .title-tag {
-    font-size: 7.5pt;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--mid);
-    margin-top: 3px;
+    font-size: 8.5pt;
+    letter-spacing: 0;
+    text-transform: none;
+    color: var(--ink);
+    margin-top: 3mm;
+    line-height: 1.7;
   }
 
-  .contact-block {
-    text-align: right;
-    font-size: 7.8pt;
-    color: var(--mid);
-    line-height: 1.65;
+  .profile-photo {
+    width: 30mm;
+    height: 34mm;
+    object-fit: cover;
+    object-position: center top;
+    flex-shrink: 0;
+    border: 1px solid var(--rule);
   }
 
   .summary {
@@ -110,7 +130,7 @@
   .col .section:last-child { flex: 1; }
 
   .section-heading {
-    font-family: 'EB Garamond', serif;
+    font-family: Cambria, Georgia, serif;
     font-size: 10.4pt;
     font-weight: 700;
     letter-spacing: 0.13em;
@@ -170,7 +190,7 @@
   }
 
   ul.b li::before {
-    content: '–';
+    content: '•';
     position: absolute;
     left: 0;
     color: var(--light);
@@ -216,18 +236,46 @@
   @media print {
     html, body {
       width: 210mm;
-      height: 297mm;
+      min-height: 297mm;
       background: none;
     }
 
-    .page { margin: 0; box-shadow: none; }
+    body.print-resume .cover-page,
+    body.print-cover .resume-page {
+      display: none !important;
+    }
+
+    .page {
+      margin: 0;
+      box-shadow: none;
+    }
+
+    body.print-resume .resume-page,
+    body.print-cover .cover-page {
+      break-after: auto;
+    }
+
     .print-btn { display: none !important; }
   }
 
   .print-btn {
     width: 210mm;
-    margin: 0 auto 10px;
-    text-align: right;
+    margin: 14px auto 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .edit-note {
+    margin-right: auto;
+    color: var(--mid);
+    font-size: 8pt;
+  }
+
+  body.editing .edit-note {
+    color: var(--ink);
+    font-weight: 500;
   }
 
   .print-btn button {
@@ -235,7 +283,7 @@
     color: #fff;
     border: none;
     padding: 6px 16px;
-    font-family: 'DM Sans', sans-serif;
+    font-family: Cambria, Georgia, serif;
     font-size: 8pt;
     letter-spacing: 0.06em;
     cursor: pointer;
@@ -243,6 +291,52 @@
   }
 
   .print-btn button:hover { background: #333; }
+
+  /* Cover letter page */
+  .letter-page {
+    padding: 18mm 20mm;
+  }
+
+  .letter-header {
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 5mm;
+    margin-bottom: 12mm;
+  }
+
+  .letter-contact {
+    font-size: 9pt;
+    color: var(--mid);
+    line-height: 1.7;
+    margin-top: 4mm;
+  }
+
+  .letter-contact a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .letter-body {
+    font-family: Cambria, Georgia, serif;
+    font-size: 13.5pt;
+    line-height: 1.72;
+    color: var(--ink);
+  }
+
+  .letter-body p {
+    margin-bottom: 6mm;
+  }
+
+  .letter-body .salutation {
+    margin-bottom: 7mm;
+  }
+
+  .signature-block {
+    margin-top: 12mm;
+  }
+
+  .signature-name {
+    font-weight: 600;
+  }
 </style>
 </head>
 <body>
@@ -258,11 +352,13 @@
     <header class="header">
       <div>
         <div class="name">Paul Andrei Vicente</div>
-        <div class="title-tag">Information Technology Graduate </div>
+        <div class="title-tag">
+          Tuburan, Ligao City, Albay<br>
+          vicentepaulandrei1823@gmail.com<br>
+          +63 992 319 3769
+        </div>
       </div>
-      <div class="contact-block">
-        vicentepaulandrei1823@gmail.com &nbsp;|&nbsp; +63 992 319 3769 &nbsp;|&nbsp; Tuburan, Ligao City, Albay
-      </div>
+      <img class="profile-photo" src="image.jpg" alt="Paul Andrei Vicente">
     </header>
     <div class="summary">
       Detail oriented Information Technology graduate with hands-on experience in hardware and software troubleshooting, basic network configuration, and graphic design. Gained practical, real-world exposure through an IT internship at TESDA providing technical support, system maintenance, and end-user assistance in a professional government office environment. Proficient in industry-standard productivity and design tools, with a collaborative work ethic and a strong commitment to continuous learning and professional growth.
@@ -423,5 +519,143 @@
   </div><!-- end body -->
 
 </div><!-- end page -->
+
+<div class="page letter-page">
+  <header class="letter-header">
+    <div class="name">Paul Andrei Vicente</div>
+    <div class="letter-contact">
+      Tuburan, Ligao City, Albay<br>
+      <a href="mailto:vicentepaulandrei1823@gmail.com">vicentepaulandrei1823@gmail.com</a><br>
+      +63 992 319 3769
+    </div>
+  </header>
+
+  <main class="letter-body">
+    <p class="salutation">Dear Hiring Manager,</p>
+
+    <p>
+      I am writing to express my interest in applying for a position within your company where I can contribute my technical skills, creativity, and willingness to learn. I recently graduated with a Bachelor of Science in Information Technology (BSIT) from Infotech Development System Colleges (IDSC).
+    </p>
+
+    <p>
+      During my internship at TESDA, I gained hands-on experience in hardware and software troubleshooting, system maintenance, technical support, and basic network configuration. This opportunity allowed me to develop practical problem-solving skills, professionalism, and the ability to work effectively in a team-oriented environment.
+    </p>
+
+    <p>
+      In addition to my technical background, I also have experience in graphic design and digital content creation using tools such as Canva, Adobe Photoshop, Adobe Illustrator, and Figma. I am adaptable, detail-oriented, and eager to continuously improve my skills while contributing positively to the organization.
+    </p>
+
+    <p>
+      I would appreciate the opportunity to discuss how my knowledge and abilities can contribute to your team. Thank you for your time and consideration. I look forward to the opportunity for an interview.
+    </p>
+
+    <div class="signature-block">
+      <p>Sincerely,</p>
+      <p class="signature-name">Paul Andrei Vicente</p>
+    </div>
+  </main>
+</div><!-- end cover letter page -->
+<script>
+  const toolbar = document.querySelector('.print-btn');
+  const pages = document.querySelectorAll('.page');
+  const storageKey = 'paul-vicente-resume-pages';
+
+  toolbar.innerHTML = `
+    <span class="edit-note">Editing is off. Click Edit Text before changing the resume or cover letter.</span>
+    <button type="button" id="editToggle">Edit Text</button>
+    <button type="button" onclick="downloadDocument('resume')">Download Resume</button>
+    <button type="button" onclick="downloadDocument('cover')">Download Cover Letter</button>
+  `;
+
+  const editToggle = document.querySelector('#editToggle');
+  const editNote = document.querySelector('.edit-note');
+
+  pages[0].classList.add('resume-page');
+  pages[1].classList.add('cover-page');
+
+  function setEditing(enabled) {
+    document.body.classList.toggle('editing', enabled);
+    editToggle.textContent = enabled ? 'Done Editing' : 'Edit Text';
+    editNote.textContent = enabled
+      ? 'Editing is on. Click Done Editing when finished.'
+      : 'Editing is off. Click Edit Text before changing the resume or cover letter.';
+
+    pages.forEach((page) => {
+      page.classList.toggle('is-editing', enabled);
+      page.setAttribute('contenteditable', enabled ? 'true' : 'false');
+      page.setAttribute('spellcheck', enabled ? 'true' : 'false');
+    });
+
+    if (!enabled) saveEdits();
+  }
+
+  function loadSavedEdits() {
+    const saved = localStorage.getItem(storageKey);
+    if (!saved) return;
+
+    try {
+      const savedPages = JSON.parse(saved);
+      if (savedPages.resume) pages[0].innerHTML = savedPages.resume;
+      if (savedPages.cover) pages[1].innerHTML = savedPages.cover;
+    } catch (error) {
+      localStorage.removeItem(storageKey);
+    }
+  }
+
+  function syncResumeHeader() {
+    const header = pages[0].querySelector('.header');
+    if (!header) return;
+
+    header.innerHTML = `
+      <div>
+        <div class="name">Paul Andrei Vicente</div>
+        <div class="title-tag">
+          Tuburan, Ligao City, Albay<br>
+          vicentepaulandrei1823@gmail.com<br>
+          +63 992 319 3769
+        </div>
+      </div>
+      <img class="profile-photo" src="image.jpg" alt="Paul Andrei Vicente">
+    `;
+  }
+
+  function saveEdits() {
+    localStorage.setItem(storageKey, JSON.stringify({
+      resume: pages[0].innerHTML,
+      cover: pages[1].innerHTML
+    }));
+  }
+
+  function downloadDocument(type) {
+    saveEdits();
+    document.body.classList.toggle('print-resume', type === 'resume');
+    document.body.classList.toggle('print-cover', type === 'cover');
+    document.title = type === 'resume'
+      ? 'Resume - Paul Andrei Vicente'
+      : 'Cover Letter - Paul Andrei Vicente';
+    window.print();
+  }
+
+  window.addEventListener('afterprint', () => {
+    document.body.classList.remove('print-resume', 'print-cover');
+    document.title = 'Resume - Paul Andrei Vicente';
+  });
+
+  pages.forEach((page) => {
+    page.addEventListener('input', saveEdits);
+    page.addEventListener('paste', (event) => {
+      event.preventDefault();
+      const text = event.clipboardData.getData('text/plain');
+      document.execCommand('insertText', false, text);
+    });
+  });
+
+  loadSavedEdits();
+  syncResumeHeader();
+  setEditing(false);
+  editToggle.addEventListener('click', () => {
+    setEditing(!document.body.classList.contains('editing'));
+  });
+</script>
 </body>
 </html>
