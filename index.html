@@ -85,6 +85,11 @@
     line-height: 1.7;
   }
 
+  .title-tag a {
+    color: inherit;
+    text-decoration: none;
+  }
+
   .profile-photo {
     width: 30mm;
     height: 34mm;
@@ -103,18 +108,17 @@
     margin-bottom: 0;
   }
 
-  /* ── MAIN BODY: two columns filling remaining height ── */
+  /* ── MAIN BODY: single column ── */
   .body {
-    display: grid;
-    grid-template-columns: 55% 45%;
+    display: flex;
+    flex-direction: column;
     flex: 1;
     min-height: 0;
-    padding: 0 14mm 10mm;
-    gap: 0 7mm;
+    padding: 0 20mm 10mm;
+    gap: 0;
     margin-top: 4mm;
   }
 
-  /* each column is a flex column that stretches */
   .col {
     display: flex;
     flex-direction: column;
@@ -125,9 +129,6 @@
     margin-bottom: 0;
     padding-bottom: 4mm;
   }
-
-  /* last section in each col gets flex:1 to push to bottom */
-  .col .section:last-child { flex: 1; }
 
   .section-heading {
     font-family: Cambria, Georgia, serif;
@@ -204,6 +205,12 @@
     font-size: 8.5pt;
     font-weight: 600;
     margin-bottom: 1.5mm;
+  }
+
+  .tools-line {
+    font-size: 8pt;
+    line-height: 1.45;
+    color: var(--mid);
   }
 
   .tags {
@@ -355,20 +362,21 @@
         <div class="title-tag">
           Tuburan, Ligao City, Albay<br>
           vicentepaulandrei1823@gmail.com<br>
-          +63 992 319 3769
+          +63 992 319 3769<br>
+          <a href="https://www.linkedin.com/in/paul-andrei-vicente-a7341740a/">linkedin.com/in/paul-andrei-vicente-a7341740a</a>
         </div>
       </div>
       <img class="profile-photo" src="image.jpg" alt="Paul Andrei Vicente">
     </header>
     <div class="summary">
-      Detail oriented Information Technology graduate with hands-on experience in hardware and software troubleshooting, basic network configuration, and graphic design. Gained practical, real-world exposure through an IT internship at TESDA providing technical support, system maintenance, and end-user assistance in a professional government office environment. Proficient in industry-standard productivity and design tools, with a collaborative work ethic and a strong commitment to continuous learning and professional growth.
+      Detail-oriented BSIT graduate with hands-on experience in hardware and software troubleshooting, basic networking, and technical support through internship experience at TESDA. Skilled in Microsoft Office, Canva, Adobe tools, and end-user support with strong problem-solving and communication skills.
     </div>
   </div>
 
-  <!-- BODY: two columns -->
+  <!-- BODY: single column -->
   <div class="body">
 
-    <!-- ═══ LEFT COLUMN ═══ -->
+    <!-- ═══ MAIN COLUMN ═══ -->
     <div class="col">
 
       <!-- INTERNSHIP -->
@@ -401,49 +409,10 @@
               <div class="entry-title">Bachelor of Science in Information Technology (BSIT)</div>
               <div class="entry-subtitle">Infotech Development System Colleges (IDSC)</div>
             </div>
-            <div class="entry-date">2022 – 2026 </div>
+            <div class="entry-date">Graduated: May 8, 2026</div>
           </div>
         </div>
       </div>
-
-      <!-- ACADEMIC -->
-      <div class="section">
-        <div class="section-heading">Academic & Practical Experience</div>
-
-        <div class="entry">
-          <div class="entry-header">
-            <div>
-              <div class="entry-title">IT Laboratory Exercises & Technical Activities</div>
-              <div class="entry-subtitle">Infotech Development System Colleges (IDSC)</div>
-            </div>
-            <div class="entry-date">2022 – 2025</div>
-          </div>
-          <ul class="b">
-            <li>Configured basic LANs, performed IP addressing exercises, and resolved connectivity issues in supervised sessions.</li>
-            <li>Reinforced core IT competencies through hands-on labs in system maintenance and infrastructure fundamentals.</li>
-          </ul>
-        </div>
-
-        <div class="entry">
-          <div class="entry-header">
-            <div>
-              <div class="entry-title">Graphic Design Contributor – School Events & Activities</div>
-              <div class="entry-subtitle">Infotech Development System Colleges (IDSC)</div>
-            </div>
-            <div class="entry-date">2022 – 2024</div>
-          </div>
-          <ul class="b">
-            <li>Produced promotional and informational posters for school events, applying color harmony, typography, and visual hierarchy principles.</li>
-            <li>Developed social media–ready visual content using Canva, Adobe Photoshop, Illustrator, and Figma.</li>
-            <li>Delivered design outputs on schedule through effective collaboration with student organizations.</li>
-          </ul>
-        </div>
-      </div>
-
-    </div><!-- end left -->
-
-    <!-- ═══ RIGHT COLUMN ═══ -->
-    <div class="col">
 
       <!-- TECHNICAL SKILLS -->
       <div class="section">
@@ -452,62 +421,35 @@
         <div class="sg">
           <div class="sg-title">Hardware & Software Support</div>
           <ul class="b">
-            <li>Hardware and software issue identification and resolution</li>
-            <li>Basic system maintenance, diagnostics, and workstation upkeep</li>
-            <li>End-user technical support and troubleshooting assistance</li>
+            <li>Hardware & Software Troubleshooting</li>
+            <li>System Maintenance & Diagnostics</li>
+            <li>End-User Technical Support</li>
           </ul>
         </div>
 
         <div class="sg">
           <div class="sg-title">Networking Fundamentals</div>
           <ul class="b">
-            <li>LAN setup, cable management, and IP addressing basics</li>
-            <li>Connectivity troubleshooting and basic network configuration</li>
+            <li>LAN Setup & IP Addressing Basics</li>
+            <li>Network Troubleshooting & Basic Configuration</li>
           </ul>
         </div>
 
         <div class="sg">
-          <div class="sg-title">Graphic Design & Visual Content</div>
+          <div class="sg-title">Tools & Software</div>
+          <div class="tools-line">Microsoft Office | Canva | Photoshop | Illustrator | Figma</div>
+        </div>
+
+        <div class="sg">
+          <div class="sg-title">Graphic Design</div>
           <ul class="b">
             <li>Social media poster design and digital layout creation</li>
             <li>Application of typography, color theory, and visual hierarchy</li>
-            <li>Brand-consistent content production for print and digital media</li>
           </ul>
         </div>
       </div>
 
-      <!-- TOOLS -->
-      <div class="section">
-        <div class="section-heading">Tools & Software</div>
-        <div class="sg">
-          <div class="sg-title">Productivity</div>
-          <div class="tags">
-            <span class="tag">Microsoft Word</span>
-            <span class="tag">Microsoft PowerPoint</span>
-          </div>
-        </div>
-        <div class="sg">
-          <div class="sg-title">Design</div>
-          <div class="tags">
-            <span class="tag">Canva</span>
-            <span class="tag">Adobe Photoshop</span>
-            <span class="tag">Adobe Illustrator</span>
-            <span class="tag">Figma</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- EXTRACURRICULAR -->
-      <div class="section">
-        <div class="section-heading">Extracurricular Activities</div>
-        <ul class="b">
-          <li>Active participant in IT-related school activities, competitions, and technology workshops</li>
-          <li>Contributed original poster and layout designs for various academic and campus events</li>
-          <li>Engaged in peer collaboration and group study initiatives within the BSIT program</li>
-        </ul>
-      </div>
-
-    </div><!-- end right -->
+    </div><!-- end main -->
 
   </div><!-- end body -->
 
@@ -551,7 +493,10 @@
 <script>
   const toolbar = document.querySelector('.print-btn');
   const pages = document.querySelectorAll('.page');
-  const storageKey = 'paul-vicente-resume-pages';
+  const storageKey = 'paul-vicente-resume-pages-v4';
+  localStorage.removeItem('paul-vicente-resume-pages');
+  localStorage.removeItem('paul-vicente-resume-pages-v2');
+  localStorage.removeItem('paul-vicente-resume-pages-v3');
 
   toolbar.innerHTML = `
     <span class="edit-note">Editing is off. Click Edit Text before changing the resume or cover letter.</span>
@@ -605,7 +550,8 @@
         <div class="title-tag">
           Tuburan, Ligao City, Albay<br>
           vicentepaulandrei1823@gmail.com<br>
-          +63 992 319 3769
+          +63 992 319 3769<br>
+          <a href="https://www.linkedin.com/in/paul-andrei-vicente-a7341740a/">linkedin.com/in/paul-andrei-vicente-a7341740a</a>
         </div>
       </div>
       <img class="profile-photo" src="image.jpg" alt="Paul Andrei Vicente">
