@@ -198,6 +198,13 @@
   }
 
   /* ── skills ── */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6mm;
+    align-items: start;
+  }
+
   .sg { margin-bottom: 3mm; }
   .sg:last-child { margin-bottom: 0; }
 
@@ -369,7 +376,7 @@
       <img class="profile-photo" src="image.jpg" alt="Paul Andrei Vicente">
     </header>
     <div class="summary">
-      Detail-oriented BSIT graduate with hands-on experience in hardware and software troubleshooting, basic networking, and technical support through internship experience at TESDA. Skilled in Microsoft Office, Canva, Adobe tools, and end-user support with strong problem-solving and communication skills.
+      Detail-oriented BSIT graduate with hands-on experience in hardware and software troubleshooting, basic networking, and technical support through internship experience at TESDA. Skilled in Microsoft Office, Canva, Adobe tools, and end-user support with strong problem-solving skills and an AI enthusiast mindset.
     </div>
   </div>
 
@@ -400,6 +407,24 @@
         </div>
       </div>
 
+      <!-- PROJECTS -->
+      <div class="section">
+        <div class="section-heading">Projects</div>
+        <div class="entry">
+          <div class="entry-title">Gym QR Attendance System</div>
+          <ul class="b">
+            <li>Built a QR-based attendance system for gym member check-ins and hours tracking using AI-powered development tools.</li>
+          </ul>
+        </div>
+        <div class="entry">
+          <div class="entry-title">TheUndergrads Ordering System</div>
+          <ul class="b">
+            <li>Built an ordering and inventory management system using AI-powered development tools.</li>
+            <li>Implemented order processing, inventory tracking, and user-friendly interfaces.</li>
+          </ul>
+        </div>
+      </div>
+
       <!-- EDUCATION -->
       <div class="section">
         <div class="section-heading">Education</div>
@@ -412,40 +437,64 @@
             <div class="entry-date">Graduated: May 8, 2026</div>
           </div>
         </div>
+        <div class="entry">
+          <div class="entry-header">
+            <div>
+              <div class="entry-title">Secondary</div>
+              <div class="entry-subtitle">Mayon Institute of Science and Technology<br>General Academic Strand (GAS)</div>
+            </div>
+            <div class="entry-date">2017 - 2021</div>
+          </div>
+        </div>
+        <div class="entry">
+          <div class="entry-header">
+            <div>
+              <div class="entry-title">Elementary</div>
+              <div class="entry-subtitle">Ligao East Central School</div>
+            </div>
+            <div class="entry-date">2011 - 2018</div>
+          </div>
+        </div>
       </div>
 
       <!-- TECHNICAL SKILLS -->
       <div class="section">
         <div class="section-heading">Technical Skills</div>
 
-        <div class="sg">
-          <div class="sg-title">Hardware & Software Support</div>
-          <ul class="b">
-            <li>Hardware & Software Troubleshooting</li>
-            <li>System Maintenance & Diagnostics</li>
-            <li>End-User Technical Support</li>
-          </ul>
-        </div>
+        <div class="skills-grid">
+          <div class="skills-left">
+            <div class="sg">
+              <div class="sg-title">Hardware & Software Support</div>
+              <ul class="b">
+                <li>Hardware & Software Troubleshooting</li>
+                <li>System Maintenance & Diagnostics</li>
+                <li>End-User Technical Support</li>
+              </ul>
+            </div>
 
-        <div class="sg">
-          <div class="sg-title">Networking Fundamentals</div>
-          <ul class="b">
-            <li>LAN Setup & IP Addressing Basics</li>
-            <li>Network Troubleshooting & Basic Configuration</li>
-          </ul>
-        </div>
+            <div class="sg">
+              <div class="sg-title">Tools & Software</div>
+              <div class="tools-line">Microsoft Office | Canva | Photoshop | Illustrator | Figma</div>
+            </div>
+          </div>
 
-        <div class="sg">
-          <div class="sg-title">Tools & Software</div>
-          <div class="tools-line">Microsoft Office | Canva | Photoshop | Illustrator | Figma</div>
-        </div>
+          <div class="skills-right">
+            <div class="sg">
+              <div class="sg-title">Networking Fundamentals</div>
+              <ul class="b">
+                <li>LAN Setup & IP Addressing Basics</li>
+                <li>Network Troubleshooting & Basic Configuration</li>
+              </ul>
+            </div>
 
-        <div class="sg">
-          <div class="sg-title">Graphic Design</div>
-          <ul class="b">
-            <li>Social media poster design and digital layout creation</li>
-            <li>Application of typography, color theory, and visual hierarchy</li>
-          </ul>
+            <div class="sg">
+              <div class="sg-title">Graphic Design</div>
+              <ul class="b">
+                <li>Social media poster design and digital layout creation</li>
+                <li>Application of typography, color theory, and visual hierarchy</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -493,11 +542,16 @@
 <script>
   const toolbar = document.querySelector('.print-btn');
   const pages = document.querySelectorAll('.page');
-  const storageKey = 'paul-vicente-resume-pages-v5';
+  const storageKey = 'paul-vicente-resume-pages-v10';
   localStorage.removeItem('paul-vicente-resume-pages');
   localStorage.removeItem('paul-vicente-resume-pages-v2');
   localStorage.removeItem('paul-vicente-resume-pages-v3');
   localStorage.removeItem('paul-vicente-resume-pages-v4');
+  localStorage.removeItem('paul-vicente-resume-pages-v5');
+  localStorage.removeItem('paul-vicente-resume-pages-v6');
+  localStorage.removeItem('paul-vicente-resume-pages-v7');
+  localStorage.removeItem('paul-vicente-resume-pages-v8');
+  localStorage.removeItem('paul-vicente-resume-pages-v9');
 
   toolbar.innerHTML = `
     <span class="edit-note">Editing is off. Click Edit Text before changing the resume or cover letter.</span>
