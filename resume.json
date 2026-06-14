@@ -1,0 +1,134 @@
+{
+  "personalInfo": {
+    "name": "Paul Andrei Vicente",
+    "headline": "BSIT Graduate | IT Support | Technical Support",
+    "photo": {
+      "src": "image.jpg",
+      "alt": "Paul Andrei Vicente"
+    },
+    "location": "Tuburan, Ligao City, Albay"
+  },
+  "contact": {
+    "email": "vicentepaulandrei1823@gmail.com",
+    "phone": "+63 992 319 3769",
+    "address": "Tuburan, Ligao City, Albay"
+  },
+  "socialLinks": [
+    {
+      "label": "linkedin.com/in/paul-andrei-vicente-a7341740a",
+      "url": "https://www.linkedin.com/in/paul-andrei-vicente-a7341740a/",
+      "type": "LinkedIn"
+    },
+    {
+      "label": "portfolio-gamma-blond-68.vercel.app",
+      "url": "https://portfolio-gamma-blond-68.vercel.app/",
+      "type": "Portfolio"
+    }
+  ],
+  "professionalSummary": "Detail-oriented BSIT graduate with hands-on experience in hardware and software troubleshooting, basic networking, and technical support through internship experience at TESDA. Skilled in Microsoft Office, Canva, Adobe tools, and end-user support with strong problem-solving skills and an AI enthusiast mindset.",
+  "workExperience": [
+    {
+      "sectionLabel": "Internship Experience",
+      "role": "IT Intern",
+      "organization": "Technical Education and Skills Development Authority (TESDA)",
+      "location": "Rawis, Legazpi City",
+      "date": "Feb 12 - Apr 30, 2025",
+      "highlights": [
+        "Diagnosed and resolved computer hardware and software issues, minimizing office downtime and maintaining operational efficiency.",
+        "Supported routine system maintenance and diagnostics to sustain reliable performance of office workstations.",
+        "Set up and maintained basic network connections, applying LAN fundamentals in a live professional environment.",
+        "Provided prompt, courteous technical assistance to staff, resolving IT concerns and supporting day-to-day end-user needs.",
+        "Gained real-world exposure to workplace IT systems, professional standards, and government office operations."
+      ]
+    }
+  ],
+  "skills": {
+    "technical": [
+      {
+        "title": "Hardware & Software Support",
+        "items": [
+          "Hardware & Software Troubleshooting",
+          "System Maintenance & Diagnostics",
+          "End-User Technical Support"
+        ]
+      },
+      {
+        "title": "Tools & Software",
+        "items": [
+          "Microsoft Office",
+          "Canva",
+          "Photoshop",
+          "Illustrator",
+          "Figma"
+        ],
+        "display": "inline"
+      },
+      {
+        "title": "Networking Fundamentals",
+        "items": [
+          "LAN Setup & IP Addressing Basics",
+          "Network Troubleshooting & Basic Configuration"
+        ]
+      },
+      {
+        "title": "Graphic Design",
+        "items": [
+          "Social media poster design and digital layout creation",
+          "Application of typography, color theory, and visual hierarchy"
+        ]
+      }
+    ],
+    "soft": [
+      "Problem Solving",
+      "Attention to Detail",
+      "Professionalism",
+      "Team Collaboration",
+      "Eagerness to Learn"
+    ]
+  },
+  "projects": [
+    {
+      "name": "Gym QR Attendance System",
+      "highlights": [
+        "Built a QR-based attendance system for gym member check-ins and hours tracking using AI-powered development tools."
+      ]
+    },
+    {
+      "name": "TheUndergrads Ordering System",
+      "highlights": [
+        "Built an ordering and inventory management system using AI-powered development tools.",
+        "Implemented order processing, inventory tracking, and user-friendly interfaces."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Science in Information Technology (BSIT)",
+      "school": "Infotech Development System Colleges (IDSC)",
+      "date": "Graduated: May 8, 2026"
+    },
+    {
+      "degree": "Secondary",
+      "school": "Mayon Institute of Science and Technology",
+      "strand": "General Academic Strand (GAS)",
+      "date": "2017 - 2021"
+    },
+    {
+      "degree": "Elementary",
+      "school": "Ligao East Central School",
+      "date": "2011 - 2018"
+    }
+  ],
+  "certifications": [],
+  "coverLetter": {
+    "salutation": "Dear Hiring Manager,",
+    "paragraphs": [
+      "As a recent BSIT graduate with hands-on IT support experience from my internship at TESDA, I am eager to apply my technical and problem-solving skills in an entry-level IT position within your company.",
+      "During my internship, I gained practical experience in hardware and software troubleshooting, system maintenance, end-user support, and basic network configuration. This experience helped me develop professionalism, attention to detail, and the ability to work effectively in a team-oriented environment.",
+      "I also have experience with Microsoft Office, Canva, Adobe Photoshop, Adobe Illustrator, and Figma, which allows me to support both technical and creative tasks when needed. I am confident that my technical foundation, professionalism, and eagerness to grow will allow me to contribute positively to your IT team.",
+      "I would appreciate the opportunity to discuss how my knowledge and abilities can contribute to your team. Thank you for your time and consideration. I look forward to the opportunity for an interview."
+    ],
+    "closing": "Sincerely,",
+    "signature": "Paul Andrei Vicente"
+  }
+}

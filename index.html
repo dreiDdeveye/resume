@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Resume – Paul Andrei Vicente</title>
+<title>Resume - Paul Andrei Vicente</title>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -22,7 +22,6 @@
     print-color-adjust: exact;
   }
 
-  /* ── A4 page shell ── */
   .page {
     width: 210mm;
     height: 297mm;
@@ -47,7 +46,6 @@
     box-shadow: 0 4px 40px rgba(0,0,0,.2), 0 0 0 2px rgba(17,17,17,.2);
   }
 
-  /* ── TOP BAR: header + summary ── */
   .top {
     padding: 11mm 20mm 0;
     flex-shrink: 0;
@@ -108,7 +106,6 @@
     margin-bottom: 0;
   }
 
-  /* ── MAIN BODY: single column ── */
   .body {
     display: flex;
     flex-direction: column;
@@ -124,7 +121,6 @@
     flex-direction: column;
   }
 
-  /* ── section ── */
   .section {
     margin-bottom: 0;
     padding-bottom: 4mm;
@@ -144,7 +140,6 @@
 
   .section:first-child .section-heading { margin-top: 0; }
 
-  /* ── entry ── */
   .entry { margin-bottom: 3.5mm; }
   .entry:last-child { margin-bottom: 0; }
 
@@ -197,7 +192,6 @@
     color: var(--light);
   }
 
-  /* ── skills ── */
   .skills-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -241,7 +235,6 @@
     line-height: 1.8;
   }
 
-  /* ── print ── */
   @page {
     size: A4;
     margin: 0;
@@ -269,7 +262,8 @@
       break-after: auto;
     }
 
-    .print-btn { display: none !important; }
+    .print-btn,
+    .data-status { display: none !important; }
   }
 
   .print-btn {
@@ -306,7 +300,6 @@
 
   .print-btn button:hover { background: #333; }
 
-  /* Cover letter page */
   .letter-page {
     padding: 18mm 20mm;
   }
@@ -351,221 +344,248 @@
   .signature-name {
     font-weight: 600;
   }
+
+  .data-status {
+    width: 210mm;
+    margin: 10px auto 0;
+    font-size: 9pt;
+    color: var(--mid);
+  }
+
+  .data-status[hidden] {
+    display: none;
+  }
 </style>
 </head>
 <body>
 
 <div class="print-btn">
-  <button onclick="window.print()">⎙ Print / Save as PDF</button>
+  <span class="edit-note">Editing is off. Click Edit Text before changing the resume or cover letter.</span>
+  <button type="button" id="editToggle">Edit Text</button>
+  <button type="button" onclick="downloadDocument('resume')">Download Resume</button>
+  <button type="button" onclick="downloadDocument('cover')">Download Cover Letter</button>
 </div>
+<div class="data-status" id="dataStatus">Loading resume data...</div>
 
-<div class="page">
+<div class="page resume-page" id="resumePage"></div>
 
-  <!-- TOP: header + summary -->
-  <div class="top">
-    <header class="header">
-      <div>
-        <div class="name">Paul Andrei Vicente</div>
-        <div class="title-tag">
-          Tuburan, Ligao City, Albay<br>
-          vicentepaulandrei1823@gmail.com<br>
-          +63 992 319 3769<br>
-          <a href="https://www.linkedin.com/in/paul-andrei-vicente-a7341740a/">linkedin.com/in/paul-andrei-vicente-a7341740a</a><br>
-          <a href="https://portfolio-gamma-blond-68.vercel.app/">portfolio-gamma-blond-68.vercel.app</a>
-        </div>
-      </div>
-      <img class="profile-photo" src="image.jpg" alt="Paul Andrei Vicente">
-    </header>
-    <div class="summary">
-      Detail-oriented BSIT graduate with hands-on experience in hardware and software troubleshooting, basic networking, and technical support through internship experience at TESDA. Skilled in Microsoft Office, Canva, Adobe tools, and end-user support with strong problem-solving skills and an AI enthusiast mindset.
-    </div>
-  </div>
+<div class="page letter-page cover-page" id="coverPage"></div>
 
-  <!-- BODY: single column -->
-  <div class="body">
-
-    <!-- ═══ MAIN COLUMN ═══ -->
-    <div class="col">
-
-      <!-- INTERNSHIP -->
-      <div class="section">
-        <div class="section-heading">Internship Experience</div>
-        <div class="entry">
-          <div class="entry-header">
-            <div>
-              <div class="entry-title">IT Intern</div>
-              <div class="entry-subtitle">Technical Education and Skills Development Authority (TESDA)<br>Rawis, Legazpi City</div>
-            </div>
-            <div class="entry-date">Feb 12 – Apr 30, 2025</div>
-          </div>
-          <ul class="b">
-            <li>Diagnosed and resolved computer hardware and software issues, minimizing office downtime and maintaining operational efficiency.</li>
-            <li>Supported routine system maintenance and diagnostics to sustain reliable performance of office workstations.</li>
-            <li>Set up and maintained basic network connections, applying LAN fundamentals in a live professional environment.</li>
-            <li>Provided prompt, courteous technical assistance to staff, resolving IT concerns and supporting day-to-day end-user needs.</li>
-            <li>Gained real-world exposure to workplace IT systems, professional standards, and government office operations.</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- PROJECTS -->
-      <div class="section">
-        <div class="section-heading">Projects</div>
-        <div class="entry">
-          <div class="entry-title">Gym QR Attendance System</div>
-          <ul class="b">
-            <li>Built a QR-based attendance system for gym member check-ins and hours tracking using AI-powered development tools.</li>
-          </ul>
-        </div>
-        <div class="entry">
-          <div class="entry-title">TheUndergrads Ordering System</div>
-          <ul class="b">
-            <li>Built an ordering and inventory management system using AI-powered development tools.</li>
-            <li>Implemented order processing, inventory tracking, and user-friendly interfaces.</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- EDUCATION -->
-      <div class="section">
-        <div class="section-heading">Education</div>
-        <div class="entry">
-          <div class="entry-header">
-            <div>
-              <div class="entry-title">Bachelor of Science in Information Technology (BSIT)</div>
-              <div class="entry-subtitle">Infotech Development System Colleges (IDSC)</div>
-            </div>
-            <div class="entry-date">Graduated: May 8, 2026</div>
-          </div>
-        </div>
-        <div class="entry">
-          <div class="entry-header">
-            <div>
-              <div class="entry-title">Secondary</div>
-              <div class="entry-subtitle">Mayon Institute of Science and Technology<br>General Academic Strand (GAS)</div>
-            </div>
-            <div class="entry-date">2017 - 2021</div>
-          </div>
-        </div>
-        <div class="entry">
-          <div class="entry-header">
-            <div>
-              <div class="entry-title">Elementary</div>
-              <div class="entry-subtitle">Ligao East Central School</div>
-            </div>
-            <div class="entry-date">2011 - 2018</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- TECHNICAL SKILLS -->
-      <div class="section">
-        <div class="section-heading">Technical Skills</div>
-
-        <div class="skills-grid">
-          <div class="skills-left">
-            <div class="sg">
-              <div class="sg-title">Hardware & Software Support</div>
-              <ul class="b">
-                <li>Hardware & Software Troubleshooting</li>
-                <li>System Maintenance & Diagnostics</li>
-                <li>End-User Technical Support</li>
-              </ul>
-            </div>
-
-            <div class="sg">
-              <div class="sg-title">Tools & Software</div>
-              <div class="tools-line">Microsoft Office | Canva | Photoshop | Illustrator | Figma</div>
-            </div>
-          </div>
-
-          <div class="skills-right">
-            <div class="sg">
-              <div class="sg-title">Networking Fundamentals</div>
-              <ul class="b">
-                <li>LAN Setup & IP Addressing Basics</li>
-                <li>Network Troubleshooting & Basic Configuration</li>
-              </ul>
-            </div>
-
-            <div class="sg">
-              <div class="sg-title">Graphic Design</div>
-              <ul class="b">
-                <li>Social media poster design and digital layout creation</li>
-                <li>Application of typography, color theory, and visual hierarchy</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div><!-- end main -->
-
-  </div><!-- end body -->
-
-</div><!-- end page -->
-
-<div class="page letter-page">
-  <header class="letter-header">
-    <div class="name">Paul Andrei Vicente</div>
-    <div class="letter-contact">
-      Tuburan, Ligao City, Albay<br>
-      <a href="mailto:vicentepaulandrei1823@gmail.com">vicentepaulandrei1823@gmail.com</a><br>
-      +63 992 319 3769
-    </div>
-  </header>
-
-  <main class="letter-body">
-    <p class="salutation">Dear Hiring Manager,</p>
-
-    <p>
-      As a recent BSIT graduate with hands-on IT support experience from my internship at TESDA, I am eager to apply my technical and problem-solving skills in an entry-level IT position within your company.
-    </p>
-
-    <p>
-      During my internship, I gained practical experience in hardware and software troubleshooting, system maintenance, end-user support, and basic network configuration. This experience helped me develop professionalism, attention to detail, and the ability to work effectively in a team-oriented environment.
-    </p>
-
-    <p>
-      I also have experience with Microsoft Office, Canva, Adobe Photoshop, Adobe Illustrator, and Figma, which allows me to support both technical and creative tasks when needed. I am confident that my technical foundation, professionalism, and eagerness to grow will allow me to contribute positively to your IT team.
-    </p>
-
-    <p>
-      I would appreciate the opportunity to discuss how my knowledge and abilities can contribute to your team. Thank you for your time and consideration. I look forward to the opportunity for an interview.
-    </p>
-
-    <div class="signature-block">
-      <p>Sincerely,</p>
-      <p class="signature-name">Paul Andrei Vicente</p>
-    </div>
-  </main>
-</div><!-- end cover letter page -->
 <script>
-  const toolbar = document.querySelector('.print-btn');
   const pages = document.querySelectorAll('.page');
-  const storageKey = 'paul-vicente-resume-pages-v10';
-  localStorage.removeItem('paul-vicente-resume-pages');
-  localStorage.removeItem('paul-vicente-resume-pages-v2');
-  localStorage.removeItem('paul-vicente-resume-pages-v3');
-  localStorage.removeItem('paul-vicente-resume-pages-v4');
-  localStorage.removeItem('paul-vicente-resume-pages-v5');
-  localStorage.removeItem('paul-vicente-resume-pages-v6');
-  localStorage.removeItem('paul-vicente-resume-pages-v7');
-  localStorage.removeItem('paul-vicente-resume-pages-v8');
-  localStorage.removeItem('paul-vicente-resume-pages-v9');
-
-  toolbar.innerHTML = `
-    <span class="edit-note">Editing is off. Click Edit Text before changing the resume or cover letter.</span>
-    <button type="button" id="editToggle">Edit Text</button>
-    <button type="button" onclick="downloadDocument('resume')">Download Resume</button>
-    <button type="button" onclick="downloadDocument('cover')">Download Cover Letter</button>
-  `;
-
+  const resumePage = document.querySelector('#resumePage');
+  const coverPage = document.querySelector('#coverPage');
+  const dataStatus = document.querySelector('#dataStatus');
   const editToggle = document.querySelector('#editToggle');
   const editNote = document.querySelector('.edit-note');
 
-  pages[0].classList.add('resume-page');
-  pages[1].classList.add('cover-page');
+  function createElement(tagName, className, text) {
+    const element = document.createElement(tagName);
+    if (className) element.className = className;
+    if (text !== undefined && text !== null) element.textContent = text;
+    return element;
+  }
+
+  function appendLines(container, lines) {
+    lines.filter(Boolean).forEach((line, index) => {
+      if (index > 0) container.appendChild(document.createElement('br'));
+
+      if (line.url) {
+        const link = createElement('a', '', line.label);
+        link.href = line.url;
+        container.appendChild(link);
+      } else if (line.emailLink) {
+        const link = createElement('a', '', line.value);
+        link.href = `mailto:${line.value}`;
+        container.appendChild(link);
+      } else {
+        container.appendChild(document.createTextNode(line.value || line));
+      }
+    });
+  }
+
+  function createBulletList(items) {
+    const list = createElement('ul', 'b');
+    items.forEach((item) => {
+      list.appendChild(createElement('li', '', item));
+    });
+    return list;
+  }
+
+  function createSection(title) {
+    const section = createElement('div', 'section');
+    section.appendChild(createElement('div', 'section-heading', title));
+    return section;
+  }
+
+  function createEntryHeader(title, subtitleLines, date) {
+    const header = createElement('div', 'entry-header');
+    const textWrap = createElement('div');
+    textWrap.appendChild(createElement('div', 'entry-title', title));
+
+    if (subtitleLines.length) {
+      const subtitle = createElement('div', 'entry-subtitle');
+      appendLines(subtitle, subtitleLines);
+      textWrap.appendChild(subtitle);
+    }
+
+    header.appendChild(textWrap);
+    if (date) header.appendChild(createElement('div', 'entry-date', date));
+
+    return header;
+  }
+
+  function renderResume(data) {
+    const contactLines = [
+      data.contact.address,
+      data.contact.email,
+      data.contact.phone,
+      ...data.socialLinks.map((link) => ({ label: link.label, url: link.url }))
+    ];
+
+    resumePage.innerHTML = '';
+
+    const top = createElement('div', 'top');
+    const header = createElement('header', 'header');
+    const identity = createElement('div');
+    identity.appendChild(createElement('div', 'name', data.personalInfo.name));
+
+    const titleTag = createElement('div', 'title-tag');
+    appendLines(titleTag, contactLines);
+    identity.appendChild(titleTag);
+    header.appendChild(identity);
+
+    const photo = createElement('img', 'profile-photo');
+    photo.src = data.personalInfo.photo.src;
+    photo.alt = data.personalInfo.photo.alt;
+    header.appendChild(photo);
+    top.appendChild(header);
+    top.appendChild(createElement('div', 'summary', data.professionalSummary));
+    resumePage.appendChild(top);
+
+    const body = createElement('div', 'body');
+    const column = createElement('div', 'col');
+
+    const workSectionTitle = data.workExperience[0]?.sectionLabel || 'Work Experience';
+    const workSection = createSection(workSectionTitle);
+    data.workExperience.forEach((job) => {
+      const entry = createElement('div', 'entry');
+      entry.appendChild(createEntryHeader(job.role, [job.organization, job.location], job.date));
+      entry.appendChild(createBulletList(job.highlights));
+      workSection.appendChild(entry);
+    });
+    column.appendChild(workSection);
+
+    const skillsSection = createSection('Technical Skills');
+    const skillsGrid = createElement('div', 'skills-grid');
+    const skillsLeft = createElement('div', 'skills-left');
+    const skillsRight = createElement('div', 'skills-right');
+
+    data.skills.technical.forEach((group, index) => {
+      const skillGroup = createElement('div', 'sg');
+      skillGroup.appendChild(createElement('div', 'sg-title', group.title));
+
+      if (group.display === 'inline') {
+        skillGroup.appendChild(createElement('div', 'tools-line', group.items.join(' | ')));
+      } else {
+        skillGroup.appendChild(createBulletList(group.items));
+      }
+
+      (index % 2 === 0 ? skillsLeft : skillsRight).appendChild(skillGroup);
+    });
+
+    skillsGrid.appendChild(skillsLeft);
+    skillsGrid.appendChild(skillsRight);
+    skillsSection.appendChild(skillsGrid);
+    column.appendChild(skillsSection);
+
+    const projectsSection = createSection('Projects');
+    data.projects.forEach((project) => {
+      const entry = createElement('div', 'entry');
+      entry.appendChild(createElement('div', 'entry-title', project.name));
+      entry.appendChild(createBulletList(project.highlights));
+      projectsSection.appendChild(entry);
+    });
+    column.appendChild(projectsSection);
+
+    const educationSection = createSection('Education');
+    data.education.forEach((item) => {
+      const entry = createElement('div', 'entry');
+      entry.appendChild(createEntryHeader(
+        item.degree,
+        [item.school, item.strand].filter(Boolean),
+        item.date
+      ));
+      educationSection.appendChild(entry);
+    });
+    column.appendChild(educationSection);
+
+    if (data.certifications.length) {
+      const certificationsSection = createSection('Certifications');
+      data.certifications.forEach((certification) => {
+        const entry = createElement('div', 'entry');
+        entry.appendChild(createEntryHeader(
+          certification.name,
+          [certification.issuer].filter(Boolean),
+          certification.date
+        ));
+        certificationsSection.appendChild(entry);
+      });
+      column.appendChild(certificationsSection);
+    }
+
+    body.appendChild(column);
+    resumePage.appendChild(body);
+  }
+
+  function renderCoverLetter(data) {
+    coverPage.innerHTML = '';
+
+    const header = createElement('header', 'letter-header');
+    header.appendChild(createElement('div', 'name', data.personalInfo.name));
+
+    const contact = createElement('div', 'letter-contact');
+    appendLines(contact, [
+      data.contact.address,
+      { value: data.contact.email, emailLink: true },
+      data.contact.phone
+    ]);
+    header.appendChild(contact);
+    coverPage.appendChild(header);
+
+    const letterBody = createElement('main', 'letter-body');
+    letterBody.appendChild(createElement('p', 'salutation', data.coverLetter.salutation));
+    data.coverLetter.paragraphs.forEach((paragraph) => {
+      letterBody.appendChild(createElement('p', '', paragraph));
+    });
+
+    const signatureBlock = createElement('div', 'signature-block');
+    signatureBlock.appendChild(createElement('p', '', data.coverLetter.closing));
+    signatureBlock.appendChild(createElement('p', 'signature-name', data.coverLetter.signature));
+    letterBody.appendChild(signatureBlock);
+    coverPage.appendChild(letterBody);
+  }
+
+  function showDataError(error) {
+    dataStatus.hidden = false;
+    dataStatus.textContent = 'Resume data could not be loaded. Please check that /resume.json exists and contains valid JSON.';
+    console.error('Failed to load resume.json:', error);
+  }
+
+  async function loadResumeData() {
+    try {
+      const response = await fetch('resume.json', { cache: 'no-store' });
+      if (!response.ok) throw new Error(`resume.json returned ${response.status}`);
+
+      const data = await response.json();
+      renderResume(data);
+      renderCoverLetter(data);
+      dataStatus.hidden = true;
+      setEditing(false);
+    } catch (error) {
+      showDataError(error);
+    }
+  }
 
   function setEditing(enabled) {
     document.body.classList.toggle('editing', enabled);
@@ -579,51 +599,9 @@
       page.setAttribute('contenteditable', enabled ? 'true' : 'false');
       page.setAttribute('spellcheck', enabled ? 'true' : 'false');
     });
-
-    if (!enabled) saveEdits();
-  }
-
-  function loadSavedEdits() {
-    const saved = localStorage.getItem(storageKey);
-    if (!saved) return;
-
-    try {
-      const savedPages = JSON.parse(saved);
-      if (savedPages.resume) pages[0].innerHTML = savedPages.resume;
-      if (savedPages.cover) pages[1].innerHTML = savedPages.cover;
-    } catch (error) {
-      localStorage.removeItem(storageKey);
-    }
-  }
-
-  function syncResumeHeader() {
-    const header = pages[0].querySelector('.header');
-    if (!header) return;
-
-    header.innerHTML = `
-      <div>
-        <div class="name">Paul Andrei Vicente</div>
-        <div class="title-tag">
-          Tuburan, Ligao City, Albay<br>
-          vicentepaulandrei1823@gmail.com<br>
-          +63 992 319 3769<br>
-          <a href="https://www.linkedin.com/in/paul-andrei-vicente-a7341740a/">linkedin.com/in/paul-andrei-vicente-a7341740a</a><br>
-          <a href="https://portfolio-gamma-blond-68.vercel.app/">portfolio-gamma-blond-68.vercel.app</a>
-        </div>
-      </div>
-      <img class="profile-photo" src="image.jpg" alt="Paul Andrei Vicente">
-    `;
-  }
-
-  function saveEdits() {
-    localStorage.setItem(storageKey, JSON.stringify({
-      resume: pages[0].innerHTML,
-      cover: pages[1].innerHTML
-    }));
   }
 
   function downloadDocument(type) {
-    saveEdits();
     document.body.classList.toggle('print-resume', type === 'resume');
     document.body.classList.toggle('print-cover', type === 'cover');
     document.title = type === 'resume'
@@ -638,7 +616,6 @@
   });
 
   pages.forEach((page) => {
-    page.addEventListener('input', saveEdits);
     page.addEventListener('paste', (event) => {
       event.preventDefault();
       const text = event.clipboardData.getData('text/plain');
@@ -646,12 +623,11 @@
     });
   });
 
-  loadSavedEdits();
-  syncResumeHeader();
   setEditing(false);
   editToggle.addEventListener('click', () => {
     setEditing(!document.body.classList.contains('editing'));
   });
+  loadResumeData();
 </script>
 </body>
 </html>
