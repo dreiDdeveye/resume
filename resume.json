@@ -6,7 +6,7 @@
       "src": "image.jpg",
       "alt": "Paul Andrie Vicente"
     },
-    "location": "Tuburan Ligao City, Albay"
+    "location": "Tuburan, Ligao City, Albay"
   },
   "contact": {
     "email": "vicentepaulandrei1823@gmail.com",
@@ -15,17 +15,17 @@
   },
   "socialLinks": [
     {
-      "label": "linkedin.com/in/paul-andrei-vicente-a7341740a",
-      "url": "https://www.linkedin.com/in/paul-andrei-vicente-a7341740a/",
-      "type": "LinkedIn"
-    },
-    {
       "label": "portfolio-gamma-blond-68.vercel.app",
       "url": "https://portfolio-gamma-blond-68.vercel.app/",
       "type": "Portfolio"
+    },
+    {
+      "label": "linkedin.com/in/paul-andrei-vicente-a7341740a",
+      "url": "https://www.linkedin.com/in/paul-andrei-vicente-a7341740a/",
+      "type": "LinkedIn"
     }
   ],
-  "professionalSummary": "Detail-oriented BSIT graduate with hands-on experience in hardware and software troubleshooting, basic networking, and technical support through internship experience at TESDA. Skilled in Microsoft Office, Canva, Adobe tools, and end-user support with strong problem-solving skills and an AI enthusiast.",
+  "professionalSummary": "Organized BSIT graduate with hands-on internship experience at TESDA in technical support, IT asset inventory, documentation, and basic networking. Proficient in Microsoft Office, Microsoft Excel, Canva, and Adobe tools, with strong organizational and problem-solving skills.",
   "workExperience": [
     {
       "sectionLabel": "Internship Experience",
@@ -34,11 +34,12 @@
       "location": "Rawis, Legazpi City",
       "date": "Feb 12 - Apr 30, 2025",
       "highlights": [
-        "Diagnosed and resolved computer hardware and software issues, minimizing office downtime and maintaining operational efficiency.",
-        "Supported routine system maintenance and diagnostics to sustain reliable performance of office workstations.",
-        "Set up and maintained basic network connections, applying LAN fundamentals in a live professional environment.",
-        "Provided prompt, courteous technical assistance to staff, resolving IT concerns and supporting day-to-day end-user needs.",
-        "Gained real-world exposure to workplace IT systems, professional standards, and government office operations."
+        "Assisted in monitoring and organizing IT equipment and office assets, ensuring accurate records of available devices and peripherals.",
+        "Updated inventory logs and maintained documentation for computer equipment, accessories, and other IT resources using Microsoft Excel.",
+        "Supported the receiving, inspection, labeling, and storage of IT equipment and supplies.",
+        "Performed routine inventory checks to verify asset availability and report missing, damaged, or non-functional equipment.",
+        "Maintained organized records and documentation to support efficient asset tracking and inventory management.",
+        "Collaborated with supervisors and team members to ensure accurate inventory records and smooth daily operations."
       ]
     }
   ],
@@ -53,22 +54,23 @@
         ]
       },
       {
+        "title": "Networking Fundamentals",
+        "items": [
+          "LAN Setup & IP Addressing Basics",
+          "Network Troubleshooting & Basic Configuration"
+        ]
+      },
+      {
         "title": "Tools & Software",
         "items": [
           "Microsoft Office",
+          "Microsoft Excel",
           "Canva",
           "Photoshop",
           "Illustrator",
           "Figma"
         ],
         "display": "inline"
-      },
-      {
-        "title": "Networking Fundamentals",
-        "items": [
-          "LAN Setup & IP Addressing Basics",
-          "Network Troubleshooting & Basic Configuration"
-        ]
       },
       {
         "title": "Graphic Design",
@@ -80,10 +82,9 @@
     ],
     "soft": [
       "Problem Solving",
+      "Organization",
       "Attention to Detail",
-      "Professionalism",
-      "Team Collaboration",
-      "Eagerness to Learn"
+      "Team Collaboration"
     ]
   },
   "projects": [
@@ -115,20 +116,19 @@
     },
     {
       "degree": "Elementary",
-      "school": "Ligao East Central School",
-      "date": "2011 - 2018"
+      "school": "Ligao East Central School"
     }
   ],
   "certifications": [],
   "coverLetter": {
     "salutation": "Dear Hiring Manager,",
     "paragraphs": [
-      "As a recent BSIT graduate with hands-on IT support experience from my internship at TESDA, I am eager to apply my technical and problem-solving skills in an entry-level IT position within your company.",
-      "During my internship, I gained practical experience in hardware and software troubleshooting, system maintenance, end-user support, and basic network configuration. This experience helped me develop professionalism, attention to detail, and the ability to work effectively in a team-oriented environment.",
-      "I also have experience with Microsoft Office, Canva, Adobe Photoshop, Adobe Illustrator, and Figma, which allows me to support both technical and creative tasks when needed. I am confident that my technical foundation, professionalism, and eagerness to grow will allow me to contribute positively to your IT team.",
-      "I would appreciate the opportunity to discuss how my knowledge and abilities can contribute to your team. Thank you for your time and consideration. I look forward to the opportunity for an interview."
+      "As a BSIT graduate with hands-on internship experience at TESDA, I am excited to apply my technical knowledge and organizational skills to an entry-level position within your company.",
+      "During my internship, I gained practical experience in IT asset inventory, documentation, Microsoft Excel, hardware and software support, and basic networking. I also assisted in maintaining inventory records, tracking IT assets, and supporting daily office operations.",
+      "In addition to my technical background, I am proficient in Microsoft Office, Microsoft Excel, Canva, Adobe Photoshop, Adobe Illustrator, and Figma. I am confident that my skills and willingness to learn will allow me to contribute effectively to your team.",
+      "Thank you for your time and consideration. I look forward to the opportunity to discuss how I can contribute to your organization."
     ],
     "closing": "Sincerely,",
-    "signature": "Paul Andrei Vicente"
+    "signature": "Paul Andrie Vicente"
   }
 }
